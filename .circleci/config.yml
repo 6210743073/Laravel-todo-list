@@ -59,8 +59,4 @@ jobs:
           name: "Run Http Tests"
           command: ./vendor/bin/phpunit tests/Feature
 
-      - run:
-          name: Run Laravel Server
-          command: php artisan serve
-          background: true
 
