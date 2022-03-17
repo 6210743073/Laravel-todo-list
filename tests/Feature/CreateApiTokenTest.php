@@ -12,7 +12,7 @@ use Tests\TestCase;
 class CreateApiTokenTest extends TestCase
 {
     use RefreshDatabase;
-
+    #6
     public function test_api_tokens_can_be_created()
     {
         if (! Features::hasApiFeatures()) {

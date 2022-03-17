@@ -12,6 +12,7 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
+    #12
     public function test_example()
     {
         $response = $this->get('/');

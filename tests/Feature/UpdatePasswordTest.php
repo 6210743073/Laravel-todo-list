@@ -12,7 +12,7 @@ use Tests\TestCase;
 class UpdatePasswordTest extends TestCase
 {
     use RefreshDatabase;
-
+    #28
     public function test_password_can_be_updated()
     {
         $this->actingAs($user = User::factory()->create());
@@ -27,7 +27,7 @@ class UpdatePasswordTest extends TestCase
 
         $this->assertTrue(Hash::check('new-password', $user->fresh()->password));
     }
-
+    #29
     public function test_current_password_must_be_correct()
     {
         $this->actingAs($user = User::factory()->create());
@@ -43,7 +43,7 @@ class UpdatePasswordTest extends TestCase
 
         $this->assertTrue(Hash::check('password', $user->fresh()->password));
     }
-
+    #30
     public function test_new_passwords_must_match()
     {
         $this->actingAs($user = User::factory()->create());

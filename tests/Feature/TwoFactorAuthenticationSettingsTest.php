@@ -11,7 +11,7 @@ use Tests\TestCase;
 class TwoFactorAuthenticationSettingsTest extends TestCase
 {
     use RefreshDatabase;
-
+    #25
     public function test_two_factor_authentication_can_be_enabled()
     {
         $this->actingAs($user = User::factory()->create());
@@ -26,7 +26,7 @@ class TwoFactorAuthenticationSettingsTest extends TestCase
         $this->assertNotNull($user->two_factor_secret);
         $this->assertCount(8, $user->recoveryCodes());
     }
-
+    #26
     public function test_recovery_codes_can_be_regenerated()
     {
         $this->actingAs($user = User::factory()->create());
@@ -44,7 +44,7 @@ class TwoFactorAuthenticationSettingsTest extends TestCase
         $this->assertCount(8, $user->recoveryCodes());
         $this->assertCount(8, array_diff($user->recoveryCodes(), $user->fresh()->recoveryCodes()));
     }
-
+    #27
     public function test_two_factor_authentication_can_be_disabled()
     {
         $this->actingAs($user = User::factory()->create());

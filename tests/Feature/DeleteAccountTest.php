@@ -12,7 +12,7 @@ use Tests\TestCase;
 class DeleteAccountTest extends TestCase
 {
     use RefreshDatabase;
-
+    #7
     public function test_user_accounts_can_be_deleted()
     {
         if (! Features::hasAccountDeletionFeatures()) {

@@ -11,7 +11,7 @@ use Tests\TestCase;
 class RegistrationTest extends TestCase
 {
     use RefreshDatabase;
-
+    #22
     public function test_registration_screen_can_be_rendered()
     {
         if (! Features::enabled(Features::registration())) {
@@ -22,7 +22,7 @@ class RegistrationTest extends TestCase
 
         $response->assertStatus(200);
     }
-
+    #23
     public function test_registration_screen_cannot_be_rendered_if_support_is_disabled()
     {
         if (Features::enabled(Features::registration())) {
@@ -33,7 +33,7 @@ class RegistrationTest extends TestCase
 
         $response->assertStatus(404);
     }
-
+    #24
     public function test_new_users_can_register()
     {
         if (! Features::enabled(Features::registration())) {
