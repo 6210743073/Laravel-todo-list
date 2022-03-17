@@ -28,5 +28,6 @@ class TodoTest extends TestCase
             ->press('Add Task')
             ->seePageIs('/dashboard')
             ->seeInDatabase('/task/{task}', ['description' => 'A New Todo']);
+        $this->assertTrue(true);
     }
 }
