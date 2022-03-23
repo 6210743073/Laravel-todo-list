@@ -43,7 +43,7 @@ class FunctionTest extends TestCase
                  'description' => 'Test Task'
              ]);
 
-        $response->assertStatus(404);
+        $response->assertStatus(302);
         $response->assertRedirect(RouteServiceProvider::HOME);
     }
 
