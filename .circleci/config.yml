@@ -55,3 +55,7 @@ jobs:
           command: ./vendor/bin/phpunit tests/Feature
 
 
+      - run:
+          name: "Run Seeder Tests"
+          command: php artisan db:seed --class=DatabaseSeeder
+
